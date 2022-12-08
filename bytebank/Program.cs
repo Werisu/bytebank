@@ -20,3 +20,10 @@ contaDoAndre.Transferir(50, contaDaMaria);
 
 Console.WriteLine($"Saldo do André = {contaDoAndre.saldo}");
 Console.WriteLine($"Saldo da Maria = {contaDaMaria.saldo}");
+
+ContaCorrente contaDoPedro =  new ContaCorrente();
+contaDoPedro.titular = "Pedro Slva";
+Console.WriteLine(contaDoPedro.titular);
+Console.WriteLine(contaDoPedro.saldo);
+Console.WriteLine(contaDoPedro.numero_agencia);
+Console.WriteLine(contaDoPedro.conta);

@@ -10,8 +10,8 @@ namespace bytebank
     {
         public int numero_agencia { get; set; }
         public string conta { get; set; }
+        public double saldo { get; set; } = 100;
         public string titular { get; set; }
-        public double saldo { get; set; }
 
         public void Depositar(double valor) 
         {
