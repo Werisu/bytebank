@@ -1,29 +1,14 @@
-﻿using bytebank;
+﻿using bytebank.Contas;
+using bytebank.Titular;
 
-ContaCorrente contaDoAndre = new ContaCorrente();
-contaDoAndre.titular = "André Silva";
-contaDoAndre.numero_agencia = 15;
-contaDoAndre.conta = "1010-x";
-contaDoAndre.saldo = 100;
+Cliente cliente = new Cliente("Wellysson Nascimento Rocha", "123456789", "Desenvolvedor");
 
-Console.WriteLine("Saldo da conta do André = "+contaDoAndre.saldo);
+ContaCorrente cc1 = new ContaCorrente(15, "1010-x", 0, cliente);
+ContaCorrente cc2 = new ContaCorrente(15, "1010-x", 0, cliente);
+ContaCorrente cc3 = new ContaCorrente(15, "1010-x", 0, cliente);
 
-ContaCorrente contaDaMaria = new ContaCorrente();
-contaDaMaria.titular = "Maria Souza";
-contaDaMaria.numero_agencia = 17;
-contaDaMaria.conta = "1010-5";
-contaDaMaria.saldo= 350;
+Console.WriteLine($"Olá {cc1.titular.nome}! 👋🏾");
+Console.WriteLine($"Seu saldo é {cc1.saldo}");
 
-Console.WriteLine("Saldo da conta da Maria = " + contaDaMaria.saldo);
-
-contaDoAndre.Transferir(50, contaDaMaria);
-
-Console.WriteLine($"Saldo do André = {contaDoAndre.saldo}");
-Console.WriteLine($"Saldo da Maria = {contaDaMaria.saldo}");
-
-ContaCorrente contaDoPedro =  new ContaCorrente();
-contaDoPedro.titular = "Pedro Slva";
-Console.WriteLine(contaDoPedro.titular);
-Console.WriteLine(contaDoPedro.saldo);
-Console.WriteLine(contaDoPedro.numero_agencia);
-Console.WriteLine(contaDoPedro.conta);
+Console.WriteLine("Dados de ADMINISTRADOR:");
+Console.WriteLine($"Total de contas criadas ➡️ {ContaCorrente.totalDeContasCriadas}");
